@@ -26,10 +26,11 @@ public class RockGame {
 	static int lose = 0;
 	static int draw = 0;
 	static int count = 0;
+
 	public static void main(String[] args) {
 		Random random = new Random();
 		JFrame f = new JFrame();
-		
+
 		f.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\user\\Desktop\\가위.png"));
 		f.setTitle("나의 가위바위보 게임");
 
@@ -57,8 +58,8 @@ public class RockGame {
 		JButton ro = new JButton("");
 		ro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				count ++;
-				f.setTitle("나의 가위바위보 게임 (총 게임 횟수: " + count + "회 )");   
+				count++;
+				f.setTitle("나의 가위바위보 게임 (총 게임 횟수: " + count + "회 )");
 				System.out.println("주먹을 선택하셨군요");
 				int me = r; // 나주먹냄
 				int computer = random.nextInt(2);
@@ -66,19 +67,19 @@ public class RockGame {
 				if (computer == s) {
 					result.setText("승리");
 					win = win + 1;
-					intro.setText(win + "승" + lose + "패 " + draw +"무");
+					intro.setText(win + "승" + lose + "패 " + draw + "무");
 				}
 				// 컴퓨터가 바위 냈을때
 				else if (computer == me) {
 					result.setText("무승부");
 					draw = draw + 1;
-					intro.setText(win + "승" + lose + "패 " + draw +"무");
+					intro.setText(win + "승" + lose + "패 " + draw + "무");
 				}
 				// 컴퓨터가 보 냈을때
 				else {
 					result.setText("패배");
 					lose = lose + 1;
-					intro.setText(win + "승" + lose + "패 " + draw +"무");
+					intro.setText(win + "승" + lose + "패 " + draw + "무");
 				}
 			}
 		});
@@ -89,8 +90,8 @@ public class RockGame {
 		JButton se = new JButton("");
 		se.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				f.setTitle("나의 가위바위보 게임 (총 게임 횟수: " + count + "회 )");   
-				count ++;
+				count++;
+				f.setTitle("나의 가위바위보 게임 (총 게임 횟수: " + count + "회 )");
 				System.out.println("가위를 선택하셨군요");
 				int me = s; // 나가위냄
 				int computer = random.nextInt(2);
@@ -98,19 +99,19 @@ public class RockGame {
 				if (computer == me) {
 					result.setText("무승부");
 					draw = draw + 1;
-					intro.setText(win + "승" + lose + "패 " + draw +"무");
+					intro.setText(win + "승" + lose + "패 " + draw + "무");
 				}
 				// 컴퓨터가 바위 냈을때
 				else if (computer == r) {
 					result.setText("패배");
 					lose = lose + 1;
-					intro.setText(win + "승" + lose + "패 " + draw +"무");
+					intro.setText(win + "승" + lose + "패 " + draw + "무");
 				}
 				// 컴퓨터가 보 냈을때
 				else {
 					result.setText("승리");
 					win = win + 1;
-					intro.setText(win + "승" + lose + "패 " + draw +"무");	
+					intro.setText(win + "승" + lose + "패 " + draw + "무");
 				}
 			}
 		});
@@ -121,8 +122,8 @@ public class RockGame {
 		JButton pa = new JButton("");
 		pa.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				f.setTitle("나의 가위바위보 게임 (총 게임 횟수: " + count + "회 )");   
-				count ++;
+				count++;
+				f.setTitle("나의 가위바위보 게임 (총 게임 횟수: " + count + "회 )");
 				System.out.println("보를 선택하셨군요");
 				int me = p; // 나보냄
 				int computer = random.nextInt(2);
@@ -130,19 +131,19 @@ public class RockGame {
 				if (computer == me) {
 					result.setText("무승부");
 					draw = draw + 1;
-					intro.setText(win + "승" + lose + "패 " + draw +"무");
+					intro.setText(win + "승" + lose + "패 " + draw + "무");
 				}
 				// 컴퓨터가 바위 냈을때
 				else if (computer == r) {
 					result.setText("승리");
 					win = win + 1;
-					intro.setText(win + "승" + lose + "패 " + draw +"무");
+					intro.setText(win + "승" + lose + "패 " + draw + "무");
 				}
 				// 컴퓨터가 가위 냈을때
 				else {
 					result.setText("패배");
 					lose = lose + 1;
-					intro.setText(win + "승" + lose + "패 " + draw +"무");
+					intro.setText(win + "승" + lose + "패 " + draw + "무");
 				}
 			}
 		});
